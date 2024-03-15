@@ -1,0 +1,9 @@
+CREATE TABLE `memo` (
+	`id` SERIAL NOT NULL COMMENT 'ID',
+	`taitol` VARCHAR(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+	`memo` VARCHAR(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+	`updated_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+	`deleted_at` DATETIME,
+	`created_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
